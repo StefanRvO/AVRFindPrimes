@@ -57,17 +57,17 @@ ret
 TRANSREPLY:  
 push R22
 ;Try to make some sanity check on the data
-ldi R22,0x01
+ldi R22,0x00
 transloop1:
 SBIS    UCSRA,UDRE
 RJMP    transloop1
 out     UDR,R22
-ldi R22,0x02
+ldi R22,0x00
 transloop11:
 SBIS    UCSRA,UDRE
 RJMP    transloop11
 out     UDR,R22
-ldi R22,0x03
+ldi R22,0x00
 transloop111:
 SBIS    UCSRA,UDRE
 RJMP    transloop111
